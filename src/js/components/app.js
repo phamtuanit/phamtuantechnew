@@ -12,8 +12,6 @@ Vue.component('async-component', function (resolve, reject) {
     }, 1000)
 })
 
-Vue.component('main-nav', () => import('./navigation.js'));
-
 var appvm = new Vue({
     el: '#app',
     data: function () {
@@ -22,12 +20,12 @@ var appvm = new Vue({
             message: "Welcome to Phạm Tuân's Blog"
         }
     },
+    components: {
+        "main-nav": () => import('./js/components/navigation.js'),
+        "toast-noti": () => import('./js/components/toast.js'),
+    },
     created: function () {
         // `this` trỏ đến đối tượng Vue hiện hành
         console.log('Vue-App initialized: ' + this.$data.title);
-        this.$nextTick(function () {
-            $('.toast').toast();
-            $('.toast').toast('show');
-        });
     },
 });
