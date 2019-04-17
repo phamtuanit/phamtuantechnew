@@ -1,19 +1,5 @@
-var Vuejs;
-
-function getTemplate() {
-    var html = $.ajax({
-        url: 'js/components/vue-study.html',
-        async: false,
-        success: function (data) {
-            Vuejs = data;
-            return data;
-        }
-    });
-    return html.responseText;
-}
-
 export default {
-    template: Vuejs ? Vuejs : getTemplate(),
+    template: `<p>Template not found</p>`,
     data() {
         return {
             name: "Vuejs componnet",
