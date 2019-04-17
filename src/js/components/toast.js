@@ -1,6 +1,6 @@
 export default {
     template: '#toast-noti',
-    data: function () {
+    data() {
         return {
             message: {
                 id: 0,
@@ -11,7 +11,7 @@ export default {
         }
     },
     created() {
-        console.info('Vue-Toast initialized');
+        console.info('Vue-Toast is initialized');
         this.$nextTick(function () {
             $('.toast').toast();
         });

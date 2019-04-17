@@ -1,18 +1,13 @@
-
-Vue.component('async-component', function (resolve, reject) {
-    setTimeout(function () {
-        // Pass the component definition to the resolve callback
-        resolve({
-            template: '<div>I am async!</div>',
-            created: function () {
-                // `this` trỏ đến đối tượng Vue hiện hành
-                console.log('Vue-Async initialized');
-            },
-        })
-    }, 1000)
+const router = new VueRouter({
+    routes: [
+        { path: '/test', component: () => import('./js/components/test.js') },
+        { path: '/coverage', component: () => import('./js/components/coverage.js') },
+        { path: '/vue', component: () => import('./js/components/vue-study.js') },
+    ]
 })
 
 var appvm = new Vue({
+    router,
     el: '#app',
     data: function () {
         return {
