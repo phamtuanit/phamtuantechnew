@@ -1,9 +1,9 @@
-import Component from "./router.js"
+import Router from "./router.js"
 
 var appvm = new Vue({
-    router: Component.router,
+    router: Router.router,
     el: '#app',
-    data: function () {
+    data() {
         return {
             title: "Phạm Tuân's Blog",
             message: "Welcome to Phạm Tuân's Blog"
@@ -13,12 +13,12 @@ var appvm = new Vue({
         "main-nav": () => import('./components/navigation.js'),
         "toast-noti": () => import('./components/toast.js'),
     },
-    created: function () {
-        // `this` trỏ đến đối tượng Vue hiện hành
+    created() {
         console.log('Vue-App initialized: ' + this.$data.title);
     },
 });
 
 window.Application = {
-    VueApp: appvm
+    VueApp: appvm,
+    Router: Router
 };

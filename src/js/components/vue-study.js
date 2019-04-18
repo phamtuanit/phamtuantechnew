@@ -1,5 +1,6 @@
 export default {
     template: `<p>Template not found</p>`,
+    templateFile: "vue-study.html",
     data() {
         return {
             name: "Vuejs componnet",

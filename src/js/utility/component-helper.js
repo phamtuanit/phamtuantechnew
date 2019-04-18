@@ -1,10 +1,13 @@
 export default {
     loadComponent: (moduleUrl, tmpUrl) => {
         return () => import(`../components/${moduleUrl.trim('/')}`).then((xmodule) => {
+            if (!tmpUrl && xmodule.default.templateFile) {
+                tmpUrl = xmodule.default.templateFile.trim('/');
+            }
             if (tmpUrl) {
                 return new Promise((resole, reject) => {
                     $.ajax({
-                        url: `./js/components/${tmpUrl.trim('/')}`,
+                        url: `./js/components/${tmpUrl}`,
                     }).done((html) => {
                         console.debug(`Component template '${tmpUrl}' is loaded.`);
                         xmodule.default.template = html;
@@ -17,6 +20,6 @@ export default {
             } else {
                 return xmodule;
             }
-        })
+        }).catch((error) => { console.error(`Could not load compoenet ${moduleUrl}. ${error}`) });
     }
 }
