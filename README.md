@@ -1,5 +1,7 @@
 # Simple Vuejs
+
 Study VueJs
 
 # Feature
-* Support lazy loading component template (V) and componenet (VM).
+
+- Support lazy loading component template (V) and component (VM).
