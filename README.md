@@ -1,4 +1,4 @@
-# simple_vuejs
+# Simple Vuejs
 Study VueJs
 
 # Feature
