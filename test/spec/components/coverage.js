@@ -14,7 +14,7 @@ describe("Coverage component", () => {
     expect(CoverageComponent.$el).toBeDefined();
   });
 
-  it("Checking $el which should be defined", () => {
+  it("Checking $el.textContent which should be correct", () => {
     expect(CoverageComponent.$el.textContent).toEqual("Coverage component");
   });
 });
