@@ -5,9 +5,7 @@ export default {
         routes: [
             { path: '/test', component: Helper.loadComponent('/test.js') },
             { path: '/coverage', component: Helper.loadComponent('/coverage.js') },
-            {
-                path: '/vue', component: Helper.loadComponent('/vue-study.js')
-            },
+            { path: '/blog', component: Helper.loadComponent('/blog.js') },
         ]
     })
 }

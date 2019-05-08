@@ -15,8 +15,8 @@ export default {
         },
         {
           id: 2,
-          display_name: "Vuejs",
-          router: "/vue"
+          display_name: "Blog",
+          router: "/blog"
         }
       ]
     };
