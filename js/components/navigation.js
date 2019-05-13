@@ -5,18 +5,13 @@ export default {
       links: [
         {
           id: 0,
-          display_name: "Test",
-          router: "/test"
+          display_name: "Shop",
+          router: "/shop"
         },
         {
           id: 1,
-          display_name: "Coverage",
-          router: "/coverage"
-        },
-        {
-          id: 2,
-          display_name: "Blog",
-          router: "/blog"
+          display_name: "Card",
+          router: "/card"
         }
       ]
     };
