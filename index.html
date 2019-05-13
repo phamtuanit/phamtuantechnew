@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/app.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Phạm Tuân's Blog</title>
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/app.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-  <body>
-    <script type="text/x-template" id="main-nav">
+  <title>Simple Vue.js</title>
+</head>
+
+<body>
+  <script type="text/x-template" id="main-nav">
       	<nav id="main-nav-body" class="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
         <!-- Brand -->
         <a class="navbar-brand" href="#">Home</a>
@@ -34,7 +37,7 @@
       </nav>
     </script>
 
-    <script type="text/x-template" id="toast-noti">
+  <script type="text/x-template" id="toast-noti">
       <div id="toast-noti" class="position-absolute w-100 d-flex flex-column p-4">
         <div class="toast ml-auto" role="alert" data-delay="3000" data-autohide="true">
           <div class="toast-header">
@@ -48,26 +51,28 @@
       </div>
     </script>
 
-    <div id="app">
-      <!-- Nar template -->
-      <main-nav></main-nav>
+  <div id="app">
+    <!-- Nar template -->
+    <main-nav></main-nav>
 
-      <!-- Toast -->
-      <toast-noti></toast-noti>
+    <!-- Toast -->
+    <toast-noti></toast-noti>
 
-      <!-- Main content -->
-      <div id="main-content" class="container-fluid">
-        <!-- component matched by the route will render here -->
-        <router-view></router-view>
-      </div>
+    <!-- Main content -->
+    <div id="main-content" class="container-fluid">
+      <!-- component matched by the route will render here -->
+      <router-view></router-view>
     </div>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <script src="lib/jquery.min.js"></script>
-    <script src="lib/popper.min.js"></script>
-    <script src="lib/bootstrap.js"></script>
-    <script src="lib/vue.js"></script>
-    <script src="lib/vue-router.js"></script>
-    <script src="js/app.js" type="module"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/popper.min.js"></script>
+  <script src="lib/bootstrap.js"></script>
+  <script src="lib/vue.js"></script>
+  <script src="lib/vue-router.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/app.js" type="module"></script>
+</body>
+
 </html>
