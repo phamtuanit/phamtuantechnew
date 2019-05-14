@@ -8,15 +8,15 @@
 
       <div class="col-sm">
         <!-- Card -->
-        <div class="d-flex flex-row-reverse">
-          <button type="button" class="btn btn-outline-primary p-2">
+        <div class="d-flex flex-row">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button type="button" class="btn btn-outline-primary mx-2" style="width: 100px">
             <i class="fas fa-shopping-cart"></i> <span class="badge badge-light">{{cartItemCount}}</span>
-            <span class="sr-only">unread messages</span>
           </button>
         </div>
 
         <!-- Slide -->
-        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide mt-2" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -89,10 +89,10 @@
                   </a>
                 </div>
               </div>
-              <div style="width: 200px; height: 250px;">
+              <div style="max-width: 200px; max-height: 250px;">
                 <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
                   alt="Thumbnail [200x250]" src="http://placehold.it/200x250" data-holder-rendered="true"
-                  style="width: 200px; height: 250px;">
+                  style="max-width: 200px; max-height: 250px;">
               </div>
             </div>
           </div>
