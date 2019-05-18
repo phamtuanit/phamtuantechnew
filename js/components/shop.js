@@ -1,7 +1,12 @@
 import Store from "../store/store.js";
+import Helper from "../utility/component-helper.js"
+
+Vue.component("phone-item", Helper.loadComponent('phoneItem.js'));
 
 export default {
   templateFile: "shop.html",
+  components: {
+  },
   data() {
     return {
       products: Store.instance.phones,
@@ -21,9 +26,6 @@ export default {
     });
   },
   methods: {
-    shortInfo(phone) {
-      return `${phone.sim}<br/> ${phone.battery_c}`;
-    },
     addProductToCart(phone) {
       this.store.addProductToCart(phone.type, phone.id);
       var total = 0;
